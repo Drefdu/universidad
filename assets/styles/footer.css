@@ -1,7 +1,8 @@
 
 
 .footer_insano {
-    width: 100%;
+    position: relative;
+    width: 100vw;
     background-color: #0a141d;
     padding: 45px 0;
     display: flex;
@@ -10,8 +11,7 @@
 }
 
 .footer_insano .grupo_1 {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -78,5 +78,25 @@
     font-size: 15px;
 }
 
-
+@media (max-width: 500px) {
+    .footer_insano .grupo_1 {
+      flex-direction: column;
+      gap: 20px; 
+      align-items: center;
+    }
+  
+    .footer_insano .grupo_1 .box {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  
+    .footer_insano .grupo_1 .box figure img {
+      width: 200px; 
+    }
+  
+    .footer_insano .grupo_2 {
+      margin-top: 20px;
+    }
+  }
+  
 

@@ -37,14 +37,14 @@
 }
 
 .features03 .item-img {
-    text-align: center; /* Centrar el contenido del div */
+    text-align: center; 
 }
 
 .features03 .item-img img {
     width: auto;
     height:150px ;
     display: block;
-    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    margin: 0 auto;
 }
 
 .features03 .item-content {
