@@ -1,0 +1,162 @@
+.cursos__fondo {
+  width: 100%;
+  height: auto;
+  background-color: #fdfcfc;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../img/triangulos-removebg-preview.png);
+}
+
+.cursos__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 90%;
+  /* box-shadow: 10px 10px 20px 0px #383737; */
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border-radius: 1rem;
+  margin-left: 2  rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.cursos__title {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(243, 229, 229);
+  background-color: #009878;
+  background-size: contain;
+  width: 100%;
+}
+
+.curso__card {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: clamp(18.75rem, 15.179rem + 9.524vw, 23.75rem);
+  height: 550px;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 0.5px solid #009878;
+  box-shadow: 0.2rem 0.2rem 0 1px #009878;
+  margin: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /* border: 0 1rem 1rem 0 solid black; */
+  transition: all 300ms ease;
+}
+
+.curso__card:hover {
+  width: calc(clamp(15.625rem, 9.821rem + 15.476vw, 23.75rem) + 30px);
+  height: calc(550px + 20px);
+}
+
+.card__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  margin-top: 0;
+  padding-top: 0;
+  background-color: blue;
+  background-image: url('../img/pexels-field-engineer-147254-442152.jpg ');
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+.card__etiqueda {
+  background-color: #009878;
+  position: relative;
+  color: white;
+  border-radius: 0.3rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.etiqueta__text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card__description {
+  font-family: 200;
+  color: rgba(102, 102, 102, 0.979);
+}
+
+.card__link {
+  height: 2rem;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: #009878;
+  border-radius: 0.5rem;
+  padding: 5px 20px 5px 20px;
+  line-height: 1.3rem;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  margin-left: auto;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+  box-shadow: 3px 3px 0 2px black;
+}
+
+.card__link::after{
+  content: 'Ver más';
+  position: relative;
+  display: block;
+  width: 0;
+  margin: 0;
+  top: -25px;
+  right: -36px;
+  background-color: black;
+  border-radius: 0.5rem;
+  padding: 5px 20px 5px 20px;
+  z-index: 900;
+  height: 2rem;
+  opacity: 0;
+  transition: all 200ms linear;
+  overflow: hidden;
+}
+
+.card__link:hover::after {
+  opacity: 1;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 3px 3px 0 2px #009878;
+  color: white;
+  text-align: center;
+  width: 7rem;
+  right: 0;
+}
+
+.card__link:hover {
+  opacity: 1;
+  padding-right: 0px;
+  padding-left: 0px;
+  background-color: white;
+  color: white;
+}
+
