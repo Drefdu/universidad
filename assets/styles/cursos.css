@@ -1,0 +1,16 @@
+body {
+  background-color: #009878 !important;
+  background-image: url(../img/04807429f5a04bafe4411c5911c44c83-removebg-preview.png);
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.curso-tabs {
+  height: 75%;
+  width: 90%;
+  background-color: rgb(250, 237, 237) ;
+  border-radius: 1rem;
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
