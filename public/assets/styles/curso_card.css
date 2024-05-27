@@ -1,19 +1,13 @@
 .cursos__fondo {
   width: 100%;
   height: auto;
-  background-color: #0a1a2a;
+  background-color: #fdfcfc;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-image: url(../img/triangulos-removebg-preview.png); */
-}
-
-.cursos__encabezado {
-  background-color: #009878;
-  width: 100%;
-  
+  background-image: url(../img/triangulos-removebg-preview.png);
 }
 
 .cursos__container {
@@ -44,19 +38,18 @@
 }
 
 .curso__card {
-  background-color: #0a141d;
-  color: white;
+  background-color: white;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   width: clamp(18.75rem, 15.179rem + 9.524vw, 23.75rem);
-  height: 250px;
+  height: 550px;
   border-radius: 1.5rem;
   padding: 2rem;
-  /* border: 0.5px solid #009878; */
-  /* box-shadow: 0.2rem 0.2rem 0 1px #009878; */
+  border: 0.5px solid #009878;
+  box-shadow: 0.2rem 0.2rem 0 1px #009878;
   margin: 1rem;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -65,7 +58,8 @@
 }
 
 .curso__card:hover {
-  background-color: #172938;
+  width: calc(clamp(15.625rem, 9.821rem + 15.476vw, 23.75rem) + 30px);
+  height: calc(550px + 20px);
 }
 
 .card__image-container {
@@ -84,7 +78,6 @@
 
 .card__etiqueda {
   background-color: #009878;
-  display: inline-block;
   position: relative;
   color: white;
   border-radius: 0.3rem;
@@ -94,7 +87,6 @@
 }
 
 .etiqueta__text {
-  color: white;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.5rem;
@@ -109,16 +101,15 @@
 
 .card__description {
   font-family: 200;
-  color: rgba(235, 235, 235, 0.979);
+  color: rgba(102, 102, 102, 0.979);
 }
 
 .card__link {
-  text-align: center;
   height: 2rem;
-  width: 7rem;
-  position: relative;
-  display: block;
-  background-color: #3a3a3a;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: #009878;
   border-radius: 0.5rem;
   padding: 5px 20px 5px 20px;
   line-height: 1.3rem;
@@ -126,14 +117,14 @@
   text-decoration: none;
   color: white;
   font-weight: 600;
+  margin-left: auto;
+  display: inline-block;
   cursor: pointer;
   transition: all 300ms ease-in;
-  margin-top: 15px;
-  margin-left: auto ;
-
+  box-shadow: 3px 3px 0 2px black;
 }
 
-/* .card__link::after{
+.card__link::after{
   content: 'Ver más';
   position: relative;
   display: block;
@@ -149,9 +140,9 @@
   opacity: 0;
   transition: all 200ms linear;
   overflow: hidden;
-} */
+}
 
-/* .card__link:hover::after {
+.card__link:hover::after {
   opacity: 1;
   background-color: rgb(0, 0, 0);
   box-shadow: 3px 3px 0 2px #009878;
@@ -159,13 +150,13 @@
   text-align: center;
   width: 7rem;
   right: 0;
-} */
+}
 
 .card__link:hover {
   opacity: 1;
   padding-right: 0px;
   padding-left: 0px;
-  background-color: rgb(201, 177, 177);
-  color: black;
+  background-color: white;
+  color: white;
 }
 

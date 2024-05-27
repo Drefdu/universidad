@@ -124,42 +124,61 @@
 
 <!-- CURSOS -->
 
-<section class="cursos__fondo" id="cursos">
-  <div class="cursos__encabezado">
-    <h2 class="cursos__title d-block ">Carreras</h2>
-  </div>
+  <section class="cursos__fondo" id="cursos">
+    <h2 class="cursos__title">Carreras</h2>
+    <div class="cursos__container">
 
-  <form action="/#cursos" method="GET" class="d-flex">
-    <div class="input-group mt-4">
-      <label for="product"></label>
-      <input type="text" name="product" id="product" required class="bg-dark text-white " > 
-      <button type="submit" class="btn btn-outline-secondary">Buscar</button>
-    </div>
-  </form>
-
-
-  <div class="cursos__container" id="cursos">
-    <% cursos.forEach(curso => { %>
       <div class="curso__card">
-        <div>
-          <% curso._source.etiquetas.forEach(etiqueta => { %>
-            <div class="card__etiqueda">
-              <h4 class="etiqueta__text"><%= etiqueta %></h4>
-            </div>
-          <% }) %>
+        <div class="card__image-container">
+          <img src="" alt="">
         </div>
-        <h3 class="card__title"><%= curso._source.titulo %></h3>
-        <p class="card__description">
-          <span class="d-block ">
-            <%= curso._source.description %>
-          </span>
-          <a class="card__link" href="cursos.html">Ver más</a>
-        </p>
+        <div class="card__etiqueda">
+          <h4 class="etiqueta__text">Learning</h4>
+        </div>
+        <h3 class="card__title">HTML & CSS foudations</h3>
+        <p class="card__description">Lorem ipsum dolor sit ame, iusunde odit magnam inventore deserunt accusantium iusto debitis! Suscipit.</p>
+        <a class="card__link" href="/cursos">Ver más</a>
       </div>
-    <% }); %>
-  </div>
 
-</section>
+      <div class="curso__card">
+        <div class="card__image-container">
+          <img src="" alt="">
+        </div>
+        <div class="card__etiqueda">
+          <h4 class="etiqueta__text">Learning</h4>
+        </div>
+        <h3 class="card__title">HTML & CSS foudations</h3>
+        <p class="card__description">Lorem ipsum dolor sit ame, iusunde odit magnam inventore deserunt accusantium iusto debitis! Suscipit.</p>
+        <a class="card__link" href="/cursos">Ver más</a>
+      </div>
+
+      <div class="curso__card">
+        <div class="card__image-container">
+          <img src="" alt="">
+        </div>
+        <div class="card__etiqueda">
+          <h4 class="etiqueta__text">Learning</h4>
+        </div>
+        <h3 class="card__title">HTML & CSS foudations</h3>
+        <p class="card__description">Lorem ipsum dolor sit ame, iusunde odit magnam inventore deserunt accusantium iusto debitis! Suscipit.</p>
+        <a class="card__link" href="/cursos">Ver más</a>
+      </div>
+
+      <div class="curso__card">
+        <div class="card__image-container">
+          <img src="" alt="">
+        </div>
+        <div class="card__etiqueda">
+          <h4 class="etiqueta__text">Learning</h4>
+        </div>
+        <h3 class="card__title">HTML & CSS foudations</h3>
+        <p class="card__description">Lorem ipsum dolor sit ame, iusunde odit magnam inventore deserunt accusantium iusto debitis! Suscipit.</p>
+        <a class="card__link" href="/cursos">Ver más</a>
+      </div>
+
+    </div>
+  </section>
+
 
   <!-- profesor -->
  <section class="profesores d-flex flex-row row mx-0">
