@@ -1,0 +1,220 @@
+body {
+  overflow-x: hidden;
+}
+
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url('../img/posible.jpg');
+  background-size: cover;
+  background-clip: content-box;  
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.banner__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.banner__title {
+  font-size: clamp(2.5rem, 0rem + 6.667vw, 6rem);
+  text-shadow: 2px 2px 5px black;
+  font-weight: bold;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.banner__description {
+  font-size: clamp(1.5rem, 1.143rem + 0.952vw, 2rem);
+  font-weight: 300;
+  text-shadow: 1px 2px 2px black;
+  text-align: start;
+  padding-left: 5%;
+}
+
+.banner__image-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;  
+  z-index: 2 !important;
+}
+
+.banner__image {
+  width: clamp(9.375rem, -1.786rem + 29.762vw, 25rem);
+  z-index: 2 !important;
+}
+
+.banner__button {
+  width: 150px;
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+  border: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.7rem);
+  font-family: inherit;
+ }
+ 
+ button.learn-more {
+  width: 12rem;
+  height: auto;   
+  margin: auto;
+ }
+ 
+ button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #fff;
+  border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #282936;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #282936;
+  border-right: 0.125rem solid #282936;
+  transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+  width: 100%;
+ }
+ 
+ button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+ }
+ 
+ button:hover .button-text {
+  color: #282936;
+ }
+
+ .profesores { 
+  position: relative;
+  background-color: #009878;
+  width: 100vw;
+  padding: 20px 40px;
+}
+
+ @media (max-width: 450px) {
+  .banner__image-container {
+    display: none;
+  }  
+ }
+
+ @media (max-width: 550px) {
+  .banner__description {
+    text-align: center;
+  }  
+
+  .profesores {
+    position: relative;
+    background-color: #009878;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .profesores img {
+    max-width: 80%; 
+    height: auto; 
+  }
+  
+  .profesores button {
+    margin-top: 20px;
+    align-items: center; 
+  }
+  
+  .profesores h3,
+  .profesores p {
+    margin: 10px 20px; 
+  }
+  
+  .banner__title {
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .banner__description {
+    padding-left: 0;
+  }
+}

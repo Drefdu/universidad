@@ -1,0 +1,73 @@
+body {
+  background-color: #009878 !important;
+  background-image: url(../img/04807429f5a04bafe4411c5911c44c83-removebg-preview.png);
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.info {
+  background-color: #fdfcfc;
+  padding: 80px 50px;
+  width: 100vw;
+  position: relative;
+  top: -10%;
+  /* background-image: url('../img/Premium\ Vector\ _\ Modern\ abstract\ background.jpg');  */
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  /* margin: 40px 5px;   */
+  background-size: 90% 80%; 
+}
+
+.info .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info .info-text {
+  flex: 1;
+}
+
+.info .info-text h2 {
+  margin-bottom: 20px;
+}
+
+.info .info-text p {
+  font-size: 18px;
+  text-align: justify; 
+  padding: 1%;
+}
+
+.info .info-image {
+  flex: 1;
+  text-align: center;
+}
+
+.info .info-image img {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 10px; 
+}
+
+@media screen and (max-width: 1000px) {
+  .info-image {
+      display: none;
+  }
+
+  .info-text h2 {
+      text-align: center;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.custom-btn {
+  background: none;
+  border: none;
+}

@@ -1,0 +1,55 @@
+.info-section {
+  background-color: #fdfcfc;
+  padding: 80px 50px;
+  width: 100vw;
+  position: relative;
+  background-image: url('../img/Premium\ Vector\ _\ Modern\ abstract\ background.jpg'); 
+  background-size: contain;  /* Cambiado a 'contain' para que la imagen no cubra toda el área */
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;  /* Mantener la imagen fija mientras se desplaza el contenido */
+  margin: 40px 5px;  /* Añadir un margen alrededor de la sección para espacios en blanco */
+  background-size: 90% 80%;  /* La imagen tendrá una altura del 80% del contenedor y el ancho se ajustará automáticamente */
+ /* border-radius: 10%; */
+}
+
+.info-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-section .info-text {
+  flex: 1;
+}
+
+.info-section .info-text h2 {
+  margin-bottom: 20px;
+}
+
+.info-section .info-text p {
+  font-size: 18px;
+  text-align: justify; 
+  padding: 1%;
+}
+
+.info-section .info-image {
+  flex: 1;
+  text-align: center;
+}
+
+.info-section .info-image img {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 10px; 
+}
+
+@media screen and (max-width: 1000px) {
+  .info-image {
+      display: none;
+  }
+
+  .info-text h2 {
+      text-align: center;
+  }
+}
