@@ -13,9 +13,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Ruta de ejemplo para renderizar el archivo index.ejs
-app.get('/', (req, res) => {
-  res.render('index', { title: 'Página de inicio' });
-});
+app.use('/', require('./routes/home'));
+app.use('/index', require('./routes/home'));
 
 
 // Otras rutas
