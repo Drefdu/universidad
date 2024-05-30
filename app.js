@@ -3,6 +3,7 @@ const app = express();
 const session = require('express-session');
 const path = require('path');
 const mysql = require('mysql');
+const { route } = require('./routes/carreras');
 
 const port = process.env.PORT || 3000;
 
@@ -100,13 +101,13 @@ app.post('/login', (req, res) => {
 
 
 
-app.use('/', require('./routes/home'));
-app.use('/index', require('./routes/home'));
+// app.use('/', require('./routes/home'));
+// app.use('/index', require('./routes/home'));
 
 
-app.get('/', (req, res) => {
-  res.render('index', { user: req.user });
-});
+// app.get('/', (req, res) => {
+//   res.render('index', { user: req.user });
+// });
 
 app.get('/avisos', (req, res) => {
   res.render('avisos', { title: 'Noticias' });
@@ -130,15 +131,12 @@ app.get('/registro', (req, res) => {
   res.render('registro');
 });
 
-app.get('/index', (req, res) => {
-  if (!req.session.user) {
-      res.redirect('/login');
-      return;
-  }
 
-  const user = req.session.user;
+
+app.get('/index', (req, res) => {
+  const user = req.session.user || null;
   console.log(user); 
-  res.render('index', { user });
+  res.render('index',  {user});
 });
 
 
