@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Página de carreras');
+app.get('/1', (req, res) => {
+  res.render('cursos', { title: 'Cursos' });
 });
 
 module.exports = router;
