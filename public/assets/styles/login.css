@@ -1,0 +1,66 @@
+
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+/* background-image: url('../img/'); */
+background-size: cover;
+background-position: center;
+}
+
+div {
+background-color: rgba(211, 206, 206, 0.8); /* Fondo semitransparente blanco */
+padding: 20px;
+border-radius: 10px; /* Bordes redondeados */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+display: flex; /* Mostrar como flexbox */
+justify-content: center; /* Centrar horizontalmente */
+align-items: center; /* Centrar verticalmente */
+flex-direction: column; /* Alinear en columna (opcional) */
+}
+
+/* Estilos para el contenido dentro del div */
+div h1 {
+color: #000000; /* Color del texto blanco */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
