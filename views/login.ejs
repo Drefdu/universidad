@@ -9,17 +9,14 @@
 <body>
     <div>
         <h1>Bienvenido al server !!</h1>
-        <!-- <a href="info.html">aqui</a>
-        <br>
-        <a href="/saludo">saludo</a> -->
-
-        <form id="loginForm" action="/login" method="post" >
+        <form id="loginForm" action="/login" method="post" onsubmit="return validarFormulario()">
             <label for="fname">Correo:</label><br>
-            <input type="text"  id="fname" name="correo" placeholder="User" pattern="[^&quot;']+" ><br>
+            <input type="text" id="fname" name="correo" placeholder="User" pattern="[^&quot;']+" required><br>
             <label for="lname">Contraseña:</label><br>
-            <input type="password" id="lname"  name="contrasena"  pattern="[^&quot;']+" placeholder="Password"><br><br>
+            <input type="password" id="lname" name="contrasena" pattern="[^&quot;']+" placeholder="Password" required><br><br>
             <input type="submit" value="Iniciar Sesión">
-            <input type="button" value="Registrarse" onclick="window.location.href='registro'">
+            <input type="button" value="Registrarse" onclick="window.location.href='registro'"><br><br>
+            <a href="/solicitar-restablecimiento">¿Olvidaste tu contraseña?</a>
         </form>
     </div>
 </body>
@@ -29,22 +26,12 @@
     function validarFormulario() {
         var usuario = document.getElementById("fname").value;
         var contrasena = document.getElementById("lname").value;
-    
+
         if (usuario.trim() === '' || contrasena.trim() === '') {
             alert("Por favor, complete ambos campos.");
             return false; // Detiene el envío del formulario si los campos no están completos
         }
-        
-    
+
         return true; // Permite el envío del formulario si los campos están completos y no contienen comillas
     }
 </script>
-
-    
-
-
-<!-- <h1>Bienvenido al server !!</h1>
-    <a href="info.html">aqui</a>
-    <br>
-    <a href="/saludo">saludo
-    </a> -->
