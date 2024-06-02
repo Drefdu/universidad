@@ -18,6 +18,8 @@
     "express-session": "^1.18.0",
     "mongodb": "^6.7.0",
     "mysql": "^2.18.1",
+    "node-email-validation": "^1.0.4",
+    "nodemailer": "^6.9.13",
     "path": "^0.12.7"
   },
   "devDependencies": {
