@@ -2,23 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/styles/login.css">
+    
+    <title>Inicio de Sesión</title>
 </head>
 <body>
-    <div>
-        <h1>Bienvenido al server !!</h1>
-        <form id="loginForm" action="/login" method="post" onsubmit="return validarFormulario()">
-            <label for="fname">Correo:</label><br>
-            <input type="text" id="fname" name="correo" placeholder="User" pattern="[^&quot;']+" required><br>
-            <label for="lname">Contraseña:</label><br>
-            <input type="password" id="lname" name="contrasena" pattern="[^&quot;']+" placeholder="Password" required><br><br>
-            <input type="submit" value="Iniciar Sesión">
-            <input type="button" value="Registrarse" onclick="window.location.href='registro'"><br><br>
-            <a href="/solicitar-restablecimiento">¿Olvidaste tu contraseña?</a>
-        </form>
-    </div>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Universidad Tecnológica de Namek</h2>
+                <p>Si aún no cuentas con un usuario...</p>
+                <input type="button" value="Registrarse" onclick="window.location.href='registro'">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Inicio de sesión</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-microsoft'></i>
+                </div>
+                <p>Usa tu email para iniciar sesión</p>
+                <form class="form form-register" id="loginForm" action="/login" method="post">
+                    <div>
+                        <label for="fname">
+                            <i class='bx bx-envelope' ></i>
+                            <input type="text"  id="fname" name="correo" placeholder="Correo Electronico" pattern="[^&quot;']+" >
+                        </label>
+                    </div>
+                   <div>
+                        <label for="lname">
+                            <i class='bx bx-lock-alt' ></i>
+                            <input type="password" id="lname"  name="contrasena"  pattern="[^&quot;']+" placeholder="Password">
+                        </label>
+                   </div>
+                   <input type="submit" value="Iniciar Sesión">
+                   
+                </form>
+            </div>
+        </div>
 </body>
 </html>
 
