@@ -47,7 +47,6 @@
                 </form>
             </div>
         </div>
-    </div>
 </body>
 </html>
 
@@ -55,13 +54,12 @@
     function validarFormulario() {
         var usuario = document.getElementById("fname").value;
         var contrasena = document.getElementById("lname").value;
-    
+
         if (usuario.trim() === '' || contrasena.trim() === '') {
             alert("Por favor, complete ambos campos.");
             return false; // Detiene el envío del formulario si los campos no están completos
         }
-        
-    
+
         return true; // Permite el envío del formulario si los campos están completos y no contienen comillas
     }
 </script>
