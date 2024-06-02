@@ -1,3 +1,12 @@
+:root {
+  /* SCSS HEX */
+  --rich-black: #0a141d;
+  --rich-black-2: #0a1a2a;
+  --rose-quartz: #a39ba8ff;
+  --powder-blue: #b8c5d6ff;
+  --alice-blue: #edf5fcff;
+}
+
 * {
   margin: 0;
   padding: 0;

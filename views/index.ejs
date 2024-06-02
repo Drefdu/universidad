@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  
+  <title>Inicio</title>
+  
   <link rel="stylesheet" href="assets/styles/index.css">
   <link rel="stylesheet" href="assets/styles/generales.css">
   <link rel="stylesheet" href="assets/styles/menu.css"> 
@@ -16,18 +13,36 @@
   <link rel="stylesheet" href="assets/styles/cards.css">
   <link rel="stylesheet" href="assets/styles/footer.css">  
   <link rel="stylesheet" href="assets/styles/curso_card.css">
-  
-  <title>Inicio</title>
-</head>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-<script src="./assets/javascript/vermas.js"></script>
-<script src="https://kit.fontawesome.com/26fe3ca93f.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind:wght@300;400;500;600;700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <!-- Script externos -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/26fe3ca93f.js" crossorigin="anonymous"></script>
+  
+  <!-- Scripts Propios -->
+  <script src="./assets/javascript/vermas.js"></script>
+</head>
 <body>
 
   <%- include('models/head') %>
-
+  <div class="main-container">
   <section class="banner">
     <div class="banner__info">
       <h1 class="banner__title">
@@ -50,24 +65,86 @@
     </div>
   </section>
 
+  <!-- ACCESOS  -->
+  <section class="features03">
+    <div class="features__encabezado">
+      <h2 class="cursos__title d-block ">Conoce sobre..</h2>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+
+            <a href="#" class="iconos-cards item features-image col-12 col-md-6 col-lg-4 active d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-solid fa-location-pin"></i>
+                <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5 text-center"><strong>Nuestra Ubicación</strong></h5>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7 text-center">Encuéntranos fácilmente en el corazón de la ciudad.</p>
+            </a>
+
+            <a href="#" class="iconos-cards item features-image col-12 col-md-6 col-lg-4 active d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5 text-center"><strong>Nuestra Oferta Academica</strong></h5>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7 text-center ">¡Comunícate con nosotros para más información y asistencia!</p>
+            </a>
+
+            <a href="#" class="iconos-cards item features-image col-12 col-md-6 col-lg-4 active d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-solid fa-newspaper"></i>
+                <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5 text-center"><strong>Noticias</strong></h5>
+                <p class="mbr-text mbr-fonts-style mb-3 display-7 text-center">Explora nuestras secciones y mantente informado.</p>
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <div class="info__encabezado">
+    <h2 class="cursos__title d-block ">¿Porque escojernos?</h2>
+  </div>
+  <section class="info">
+    <div class="info__description">
+      <!-- <h2>¿Porque escojernos?</h2> -->
+      <p>
+        En nuestro universo académico, encontrarás un espacio dedicado a la magia de los libros, otro vibrante con revistas y eventos escolares, y un rincón de avances tecnológicos que impulsan nuestra escuela.
+        Sumérgete en un viaje de descubrimiento y aprendizaje que desafiará tus límites y te inspirará a alcanzar nuevas alturas.
+        ¡Únete a nuestra comunidad y sé parte de la revolución del conocimiento y la innovación!
+      </p>
+    </div>
+
+    <div class="info__cualidades w-100 mt-5">
+      <div class="info__card" style="width: 20rem;">
+        <i class="fa-solid fa-star"></i>
+        <div class="card-body">
+          <h4 class="mt-2">Calidad</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="info__card" style="width: 20rem;">
+        <i class="fa-solid fa-gift"></i>
+        <div class="card-body">
+          <h4 class="mt-2">Beneficios</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="info__card" style="width: 20rem;">
+        <i class="fa-solid fa-calendar-days"></i>
+        <div class="card-body>
+          <h4 class="mt-2">Horarios</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
 
   <!-- INFO -->
-  <div class="info-section">
+  <!-- <div class="info-section">
     <div class="container">
       <div class="info-text">
         <h2>Bienvenidos a NAMEK</h2>
-        <p>
-          En nuestro universo académico, encontrarás un espacio dedicado a la magia de los libros, otro vibrante con revistas y eventos escolares, y un rincón de avances tecnológicos que impulsan nuestra escuela.
-        </p>
-        <p>
-          Sumérgete en un viaje de descubrimiento y aprendizaje que desafiará tus límites y te inspirará a alcanzar nuevas alturas.
-        </p>
-        <p>
-          ¡Únete a nuestra comunidad y sé parte de la revolución del conocimiento y la innovación!
-        </p>
+        <p>En nuestro universo académico, encontrarás un espacio dedicado a la magia de los libros, otro vibrante con revistas y eventos escolares, y un rincón de avances tecnológicos que impulsan nuestra escuela.</p>
+        <p>Sumérgete en un viaje de descubrimiento y aprendizaje que desafiará tus límites y te inspirará a alcanzar nuevas alturas.</p>
+        <p>¡Únete a nuestra comunidad y sé parte de la revolución del conocimiento y la innovación!</p>
       </div>
       <div class="info-image">
-          <!-- <img src="./assets/img/imgInfo.jpg" alt="Imagen de Información Adicional"> -->
+          <img src="./assets/img/imgInfo.jpg" alt="Imagen de Información Adicional">
           <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -91,36 +168,10 @@
           </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   
-  <!-- ACCESOS  -->
-  <section data-bs-version="5.1" class="features03 cid-ucpzQmFaJj" id="features-7-ucpzQmFaJj">
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-
-            <a href="#" class="iconos-cards item features-image col-12 col-md-6 col-lg-4 active d-flex flex-column justify-content-center align-items-center">
-                <div class="item-img mb-3"><img src="assets/img/ubicacion.png" alt="Mobirise Website Builder" title=""></div>
-                <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5 text-center"><strong>Ubicación</strong></h5>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">Encuéntranos fácilmente en el corazón de la ciudad.</p>
-            </a>
-
-            <a href="#" class="iconos-cards item features-image col-12 col-md-6 col-lg-4 active d-flex flex-column justify-content-center align-items-center">
-                <div class="item-img mb-3"><img src="assets/img/academica.png" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1"></div>
-                <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5 text-center"><strong>Oferta Academica</strong></h5>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7 text-center ">¡Comunícate con nosotros para más información y asistencia!</p>
-            </a>
-
-            <a href="#" class="iconos-cards item features-image col-12 col-md-6 col-lg-4 active d-flex flex-column justify-content-center align-items-center">
-                <div class="item-img mb-3"><img src="assets/img/noticias.png" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2"></div>
-                <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5 text-center"><strong>Noticias</strong></h5>
-                <p class="mbr-text mbr-fonts-style mb-3 display-7">Explora nuestras secciones y mantente informado.</p>
-            </a>
-        </div>
-    </div>
-  </section>
 
 <!-- CURSOS -->
 
@@ -129,13 +180,18 @@
     <h2 class="cursos__title d-block ">Carreras</h2>
   </div>
 
-  <form action="/#cursos" method="GET" class="d-flex">
-    <div class="input-group mt-4">
-      <label for="product"></label>
-      <input type="text" name="product" id="product" required class="bg-dark text-white " > 
+  <!-- <forms action="/#cursos" method="GET" class="mt-4 w-50 d-flex justify-content-center" style="margin-left: auto; margin-right: auto; gap: 10px;">
+    <label for="product"></label>
+      <input 
+        type="text" 
+        name="product" 
+        id="product" 
+        placeholder="Buscar curso"
+        required 
+        class="bg-dark text-white w-50 inline" 
+      > 
       <button type="submit" class="btn btn-outline-secondary">Buscar</button>
-    </div>
-  </form>
+  </forms> -->
 
 
   <div class="cursos__container" id="cursos">
@@ -157,15 +213,21 @@
         </p>
       </div>
     <% }); %>
+    <a href="#" class="" style="margin-left: auto;">Ver más ---></a>
   </div>
+  
+  
 
 </section>
 
   <!-- profesor -->
- <section class="profesores d-flex flex-row row mx-0">
-    <div class="col-12 col-sm-6 d-flex justify-content-center flex-column px-4">
-        <h3 class="text-white" style="font-size: 4rem; font-weight: 700;">Conoce a Nuestro Personal Docente</h3>
-        <p class="text-white fw-light fs-3 text-justify">En la Escuela Namek, estamos comprometidos con la excelencia académica 
+  <div class="profesores__encabezado">
+    <h2 class="cursos__title d-block ">Docentes</h2>
+  </div>
+ <section class="profesores">
+    <div class="profesores__card-profesores">
+        <h3 class="text-white" style="font-size: 2.5rem; font-weight: 700;">Conoce a Nuestro Personal Docente</h3>
+        <p class="text-white fw-light fs-5 text-justify">En la Escuela Namek, estamos comprometidos con la excelencia académica 
           y el desarrollo integral de nuestros estudiantes. Nuestro equipo docente es el pilar fundamental en la 
           consecución de estos objetivos. 
           <br>Conformado por profesionales altamente capacitados y apasionados por la enseñanza,
@@ -173,11 +235,11 @@
           nuestros estudiantes en su camino hacia el éxito.
         </p>
     </div>
-    <div class="col-12 col-sm-6 d-flex justify-content-center align-items-center px-4">
-        <img src="assets/img/prueba.jpg" alt="" class="w-75">
+    <div class="profesores__image">
+        <img src="assets/img/prueba.jpg" alt="" class="w-100">
     </div>
 </section>
-
+</div>
 
   <%- include('models/footer') %>
   <script src="../public/assets/javascript/menu.js"></script>
