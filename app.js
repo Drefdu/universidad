@@ -36,8 +36,7 @@ connection.connect((err) => {
     console.log('Conexión exitosa a la base de datos MySQL');
 });
 
-// aqui ponemos la piche cunfiguracion del nodemailer alv
-//no le muevan alv
+// Configuración de nodemailer
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
@@ -74,8 +73,10 @@ app.post('/registro', (req, res) => {
             return;
         }
 
+        const hashedPassword = crypto.createHash('sha1').update(contrasena).digest('hex');
+
         const insertUserQuery = 'INSERT INTO usuarios (usuario, correo, pass, rol) VALUES (?, ?, ?, ?)';
-        const values = [newusuario, newcorreo, contrasena, 'usuario'];
+        const values = [newusuario, newcorreo, hashedPassword, 'usuario'];
 
         connection.query(insertUserQuery, values, (insertErr, result) => {
             if (insertErr) {
@@ -93,12 +94,13 @@ app.get('/login', (req, res) => {
     res.render('login', { title: 'Iniciar Sesión' });
 });
 
-
 app.post('/login', (req, res) => {
     const { correo, contrasena } = req.body;
 
+    const hashedPassword = crypto.createHash('sha1').update(contrasena).digest('hex');
+
     const sql = 'SELECT * FROM usuarios WHERE correo = ? AND pass = ?';
-    const values = [correo, contrasena];
+    const values = [correo, hashedPassword];
 
     connection.query(sql, values, (err, results) => {
         if (err) {
@@ -119,13 +121,12 @@ app.get('/solicitar-restablecimiento', (req, res) => {
     res.render('solicitar-restablecimiento');
 });
 
-//RESTABLECIMIENTO NUEVOOOOOOOOOOOO
 app.post('/solicitar-restablecimiento', (req, res) => {
     const { correo } = req.body;
 
-    //  token único alv
+    // Generar token único
     const token = crypto.randomBytes(20).toString('hex');
-    const expirationTime = Date.now() + 3600000; // 1 hora alv si quieren puede ser menos alv
+    const expirationTime = Date.now() + 3600000; // 1 hora
 
     const updateTokenQuery = 'UPDATE usuarios SET resetPasswordToken = ?, resetPasswordExpires = ? WHERE correo = ?';
     connection.query(updateTokenQuery, [token, expirationTime, correo], (err, result) => {
@@ -154,7 +155,6 @@ app.post('/solicitar-restablecimiento', (req, res) => {
     });
 });
 
-
 app.get('/restablecer/:token', (req, res) => {
     const { token } = req.params;
 
@@ -181,8 +181,11 @@ app.post('/restablecer/:token', (req, res) => {
             return;
         }
 
+        
+        const hashedPassword = crypto.createHash('sha1').update(nuevaContrasena).digest('hex');
+
         const updatePasswordQuery = 'UPDATE usuarios SET pass = ?, resetPasswordToken = NULL, resetPasswordExpires = NULL WHERE resetPasswordToken = ?';
-        connection.query(updatePasswordQuery, [nuevaContrasena, token], (updateErr) => {
+        connection.query(updatePasswordQuery, [hashedPassword, token], (updateErr) => {
             if (updateErr) {
                 console.error('Error al actualizar la contraseña:', updateErr);
                 res.status(500).send('Error interno del servidor');
@@ -193,13 +196,11 @@ app.post('/restablecer/:token', (req, res) => {
     });
 });
 
-
 app.get('/index', (req, res) => {
     const user = req.session.user || null;
     console.log(user);
     res.render('index', { user });
 });
-
 
 app.get('/avisos', (req, res) => {
     res.render('avisos', { title: 'Noticias' });
