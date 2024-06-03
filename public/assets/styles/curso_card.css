@@ -1,17 +1,21 @@
 .cursos__fondo {
   width: 100%;
   height: auto;
-  background-color: #0a1a2a;
+  background-color: var(--rich-black);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
   /* background-image: url(../img/triangulos-removebg-preview.png); */
 }
 
 .cursos__encabezado {
-  background-color: #009878;
+  background-color: #0aabba;
+  display: flex;
+  justify-content: end;
+  align-items: center;
   width: 100%;
   
 }
@@ -33,18 +37,18 @@
 }
 
 .cursos__title {
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgb(243, 229, 229);
-  background-color: #009878;
+  background-color: # ;
   background-size: contain;
   width: 100%;
 }
 
 .curso__card {
-  background-color: #0a141d;
+  background-color: var(--rich-black-2);
   color: white;
   position: relative;
   display: flex;

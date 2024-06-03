@@ -1,14 +1,13 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
 const { Client } = require('@elastic/elasticsearch');
-const bodyParser = require('body-parser').json();
 const client = new Client({
   node: 'https://81a3e41e8b0e4b35a2159519111cdb91.us-central1.gcp.cloud.es.io:443',
   auth: {
       apiKey: 'SXg1U25JOEI3RFUyMHROREEtSUc6SkNpWHRwU2ZTdzJqX1JGNy00a0FEUQ=='
   }
 });
+
 
 let cursos = []
 
@@ -30,9 +29,9 @@ router.get('/', (req, res) => {
   }
   client.search(query)
   .then(response => {
-    // cursos = response.hits.hits
     cursos = response.hits.hits.slice(0,6)
-    res.render('index', {cursos});
+    const user = req.session.user || null;
+    res.render('index', {cursos, user});
   })
   .catch(err => {
     console.log(err);

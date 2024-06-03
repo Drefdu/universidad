@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Restablecer Contraseña</h1>
-    <form action="/restablecer/<%= token %>" method="post">
+    <form action="/login/restablecer/<%= token %>" method="post">
         <label for="nuevaContrasena">Nueva Contraseña:</label>
         <input type="password" id="nuevaContrasena" name="nuevaContrasena" required>
         <button type="submit">Restablecer Contraseña</button>
