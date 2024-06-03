@@ -1,27 +1,58 @@
+.iconos-cards {
+    text-decoration: none;
+    color: var(--powder-blue);
+}
 .iconos-cards h5 {
     transition: all 200ms ease;
 }
 
+.iconos-cards i {
+    font-size: 5rem;
+}
 
 .iconos-cards:hover h5 {
- font-size: 3.5rem;
+ font-size: 3.2rem;
  font-weight: 500;
+ color: white;
 }
+
 
 
 .features03 {
-    padding: 20px 50px ;
-    background-color: #fdfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 50px ; */
+    /* background-color: #67b79e; */
+    /* border-radius: 1rem ; */
+    overflow: hidden;
+    height: 420px;
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
 }
+
+.features__encabezado {
+    background-color: #565175;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
 
 .features03 .container-fluid {
     max-width: 1200px;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-right: auto;
     margin-left: auto;
 }
 
 .features03 .item {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     /* height: 350px; */
 }
 
@@ -53,7 +84,7 @@
 }
 
 .features03 .item-title {
-    color: #333333;
+    color: var(--powder-blue);
 }
 
 .features03 .item-footer {

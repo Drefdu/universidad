@@ -1,6 +1,6 @@
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./assets/img/Imagen1.png" alt="Logo" width="auto" height="70"></a>
+<nav class="navbar navbar-expand-lg">
+  <div class="d-flex justify-content-between w-100">
+    <a class="navbar-brand m-0 p-0" href="#"><img src="./assets/img/Namek_logo.png" alt="Logo" width="auto" height="60px"></a>
     <button class="navbar-toggler text-white fs-3  m-0 p-0 me-3 " type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,31 +11,34 @@
         <button type="button" class="btn-close text-white bg-white " data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
+      <div class="d-flex justify-content-end">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">Inicio</a>
+            <a class="nav-link" href="/">INICIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/avisos">Noticias</a>
+            <a class="nav-link" href="/avisos">NOTICIAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/cursos">Cursos</a>
+            <a class="nav-link" href="/cursos">CURSOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contacto">Contacto</a>
+            <a class="nav-link" href="/contacto">CONTACTO</a>
           </li>
           <% if (user) { %>
-            <li class="nav-item">
-              <a class="nav-link" href="/perfil">Mi Perfil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Cerrar Sesión</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/perfil">PERFIL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/chat">CHAT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">CERRAR SESIOÓN</a>
+          </li>
           <% } else { %>
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Iniciar Sesión</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">INICIAR SESIÓN</a>
+          </li>
           <% } %>
         </ul>
       </div>

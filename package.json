@@ -13,14 +13,19 @@
   "description": "",
   "dependencies": {
     "@elastic/elasticsearch": "^8.13.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
+    "mongod": "^2.0.0",
     "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
     "mysql": "^2.18.1",
     "node-email-validation": "^1.0.4",
     "nodemailer": "^6.9.13",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "socket.io": "^4.7.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.0"

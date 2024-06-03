@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #0A141D;
+    background-color: #0A141D !important;
     background-size: cover;
 }
 
