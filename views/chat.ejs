@@ -68,36 +68,52 @@
   </nav>
   
   <div class="main-container">
-    <div class="chat-container">
-      <div class="chat-header">
-        <% if (user.rol == 'admin') { %>
-            <button class="btn btn-link chat__notification-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#allMessages" aria-controls="allMessages" aria-label="Toggle navigation">
-            <i class="fa-solid fa-message"></i>
-            </button>
-        <% } %>
-        
-        <h3 class="chat-name" id="chatName">
-            <% if (user.rol === 'admin') { %>
-                ---
-            <% } else { %>
-                Admin
-            <% } %>
-        </h3>
-      </div>
-      
-      <div class="chat__messages" id="chat__messages">
-        <ul id="messages"></ul>
-      </div>
-      <form form id="form" action="" class="">
-        <input type="hidden" id="userIdInput" name="userId" value="<%= user._id %>">
-        <input id="input" autocomplete="off" data-user-id="" />
-        <button type="submit">
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
-      </form>
+        <section>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:1;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="container">
+                    <div class="form">
+                        <div class="chat-container">
+                            <div class="chat-header">
+                              <% if (user.rol == 'admin') { %>
+                                  <button class="btn btn-link chat__notification-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#allMessages" aria-controls="allMessages" aria-label="Toggle navigation">
+                                  <i class="fa-solid fa-message"></i>
+                                  </button>
+                              <% } %>
+    
+                              <h3 class="chat-name" id="chatName">
+                                  <% if (user.rol === 'admin') { %>
+                                      ---
+                                  <% } else { %>
+                                      Admin
+                                  <% } %>
+                              </h3>
+                            </div>
+    
+                            <div class="chat__messages" id="chat__messages">
+                              <ul id="messages"></ul>
+                            </div>
+                            <form id="form" action="" class="">
+                              <input type="hidden" id="userIdInput" name="userId" value="<%= user._id %>">
+                              <input id="input" autocomplete="off" data-user-id="" />
+                              <button type="submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                              </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </div>
-  
+    
 </body>
 
 <script>

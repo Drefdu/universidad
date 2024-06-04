@@ -1,3 +1,5 @@
+
+
 .footer_insano {
     position: relative;
     width: 100vw;
@@ -42,16 +44,6 @@
 .footer_insano .grupo_1 .box p {
     color: #efefef;
     margin-bottom: 10px;
-}
-
-.footer_insano .grupo_1 .box p a.map-link {
-    color: #efefef;
-    text-decoration: none;
-    transition: color 300ms ease;
-}
-
-.footer_insano .grupo_1 .box p a.map-link:hover {
-    color: aqua;
 }
 
 .footer_insano .grupo_1 .red-social {
@@ -106,4 +98,5 @@
     .footer_insano .grupo_2 {
       margin-top: 20px;
     }
-}
+  }
+  

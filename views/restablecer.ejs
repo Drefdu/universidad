@@ -2,44 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Restablecer contraseña</title>
-    <link rel="stylesheet" href="assets/styles/restablecer.css">
+    <title>Restablecer Contraseña</title>
 </head>
 <body>
-    <section>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="box">
-            <div class="square" style="--i:0;"></div>
-            <div class="square" style="--i:1;"></div>
-            <div class="square" style="--i:2;"></div>
-            <div class="square" style="--i:3;"></div>
-            <div class="square" style="--i:4;"></div>
-            <div class="container">
-                <div class="form">
-                    <img src="assets/img/Namek_logo.png" alt="Namek Logo" class="logo">
-					<br>
-                    <h2>Recuperación de contraseña</h2>
-					<br>
-                    <form class="form form-register" id="loginForm" action="/restablecer/<%= token %" method="post">
-                        <div>
-                            <label for="fname">
-                                <i class='bx bx-envelope'></i>
-                                <input type="password" id="fname" name="nuevaContrasena" placeholder="Nueva contraseña" required>
-                            </label>
-                        </div>
-                        <input type="submit" value="Restablecer Contraseña" class="submit-button">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <h1>Restablecer Contraseña</h1>
+    <form action="/login/restablecer/<%= token %>" method="post">
+        <label for="nuevaContrasena">Nueva Contraseña:</label>
+        <input type="password" id="nuevaContrasena" name="nuevaContrasena" required>
+        <button type="submit">Restablecer Contraseña</button>
+    </form>
 </body>
 </html>
-

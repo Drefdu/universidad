@@ -1,191 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(to bottom, #0A141D, #0A1A2A);
+    background: #fff;
     color: #181818;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+.contenedor {
+    padding-top: 4em;
+    padding-bottom: 1.5em;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../img/unifondo.jpg') no-repeat center center; /* Añade la imagen de fondo */
+    
 }
 
-.header {
-    grid-row: 1;
-}
-
-.main-content {
-    grid-row: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em 0;
-}
-
-.footer {
-    grid-row: 3;
-}
-
-.contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    position: relative;
-    margin-top: 80px; /* Espacio para que el formulario no se solape con el header */
-}
-
-.color {
-    position: absolute;
-    filter: blur(150px);
-}
-
-.color:nth-child(1) {
-    top: -350px;
-    width: 600px;
-    height: 600px;
-    background: #A39BA8;
-}
-
-.color:nth-child(2) {
-    top: 150px;
-    left: -125px;
-    width: 120px;
-    height: 120px;
-    z-index: 2;
-}
-
-.color:nth-child(3) {
-    bottom: 50px;
-    right: 100px;
-    width: 300px;
-    height: 300px;
-    background: #B8C5D6;
-}
-
-.box {
-    position: relative;
-}
-
-.box .square {
-    position: absolute;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    animation: animate 10s linear infinite;
-    animation-delay: calc(-1s * var(--i));
-}
-
-@keyframes animate {
-    0%, 100% {
-        transform: translateY(-40px);
-    }
-    50% {
-        transform: translateY(40px);
-    }
-}
-
-.box .square:nth-child(1) {
-    top: -50px;
-    right: -155px;
-    width: 100px;
-    height: 100px;
-}
-
-.box .square:nth-child(2) {
-    top: 100px;
-    left: -155px;
-    width: 120px;
-    height: 120px;
-    z-index: 2;
-}
-
-.box .square:nth-child(3) {
-    bottom: 50px;
-    right: -115px;
-    width: 80px;
-    height: 80px;
-    z-index: 2;
-}
-
-.box .square:nth-child(4) {
-    bottom: -70px;
-    left: 70px;
-    width: 50px;
-    height: 50px;
-}
-
-.box .square:nth-child(5) {
-    top: -80px;
-    left: 100px;
-    width: 60px;
-    height: 60px;
-}
-
-.form {
-    position: relative;
-    padding: 2em;
-    max-width: 900px;
-    width: 100%;
-    background: #EDF5FC;
-    border-radius: 10px;
-    border: 2px solid #9191bd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-}
-
-.logo {
-    max-width: 100px;
-    margin-bottom: 20px;
-}
-
-.titulo, h3, h4 {
-    color: #0A141D;
+.titulo {
+    text-align: center;
+    font-size: 3em;
 }
 
 .contenido {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1em;
-    width: 100%;
+    gap: 1em; /* Espacio entre las columnas en dispositivos pequeños */
 }
 
 @media (min-width: 700px) {
     .contenido {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes */
     }
 }
 
-.formulario, .info_contacto {
-    padding: 1em;
-    background: #fff;
-    border-radius: 10px;
+.formulario {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-    border: 2px solid #000;
-    width: 100%;
+    padding: 1em;
+    background: #fff; 
+    border: 2px solid #000; 
 }
 
 .formulario form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em;
+    gap: 1em; /* Añadir espacio entre los elementos del formulario */
 }
 
 .formulario form .block {
@@ -222,6 +81,12 @@ body {
     outline: #000;
 }
 
+.info_contacto {
+    background: #009878;
+    padding: 1em;
+    border: 2px solid #000; 
+}
+
 .info_contacto h4,
 .info_contacto ul,
 .info_contacto p {
@@ -235,5 +100,5 @@ body {
 }
 
 .info_contacto ul li {
-    padding: 0.3em;
+    padding: .3em;
 }

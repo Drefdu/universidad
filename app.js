@@ -49,10 +49,6 @@ app.get('/contacto', (req, res) => {
     const user = req.session.user || null;
     res.render('contacto', { user });
 });
-app.get('/mapa', (req, res) => { 
-    const user = req.session.user || null;
-    res.render('mapa', { user });
-});
 
 // Manejar errores 404
 app.use((req, res, next) => {

@@ -18,11 +18,11 @@
     <script src="https://kit.fontawesome.com/26fe3ca93f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <%- include('models/head') %>
+    <% include('header.ejs') %>
 
     <div class="main-content">
         <div class="banner">
-            <img src="./assets/img/Mapa_Grafico.png" alt="Banner Image">
+            <img src="Mapa_Grafico.png" alt="Banner Image">
         </div>
 
         <div class="container">
@@ -86,6 +86,11 @@
                                         <li>Números de contacto</li>
                                     </ul>
                                 </li>
+                            </ul>
+                        </li>
+                        <li>Chat de usuario
+                            <ul>
+                                <li>Ventana de chat</li>
                             </ul>
                         </li>
                     </ul>
@@ -182,6 +187,6 @@
         </div>
     </div>
 
-    <%- include('models/footer') %>
+    <% include('footer.ejs') %>
 </body>
 </html>

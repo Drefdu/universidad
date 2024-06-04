@@ -28,7 +28,10 @@
         <div class="form-information">
             <div class="form-information-childs">
                 <h2>Registrate</h2>
-                <br>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-microsoft'></i>
+                </div>
                 <p>O usa tu email para registrarte.</p>
                 <form class="form form-register" id="registrationForm" action="/registro" method="post">
                     <div>
@@ -44,14 +47,12 @@
                         </label>
                    </div>
                    <div>
-                        <label for="password">
-                            <i class='bx bx-lock-alt' ></i>
-                            <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
-                        </label>
-                    </div>
-                    <div class="g-recaptcha" data-sitekey="6LcT7e8pAAAAALkh-BkeOfgeI01FPBFeoR8kii7a"></div>
-                    <input type="submit" value="Registrarse">
-                    
+                    <label for="password">
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
+                    </label>
+               </div>
+                   <input type="submit" value="Registrarse">
                 </form>
             </div>
         </div>
@@ -76,7 +77,47 @@
 </body>
 </html>
 
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-    async defer>
+<script>
+    const formulario = document.getElementById('registrationForm');
+    const formObject = {};
+
+    formulario.addEventListener('submit', async function(event) {
+        event.preventDefault(); 
+
+        const formData = new FormData(formulario);
+        const url = formulario.getAttribute('action');
+        
+        formData.forEach((value, key) => {
+            formObject[key] = value;
+        });
+
+        const jsonData = JSON.stringify(formObject); 
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: jsonData
+            });
+
+            const data = await response.text();
+
+            if (response.ok) {
+                window.location.href = '/login' 
+            } else {
+                const myModal = new bootstrap.Modal(document.getElementById('emailError'))
+                const modalContent = document.getElementById('modalBody')
+                modalContent.textContent = data
+                myModal.show();
+            }
+            
+        } catch (error) {
+            const modalContent = document.getElementById('modalBody')
+            const myModal = new bootstrap.Modal(document.getElementById('emailError'))
+
+            myModal.show();
+        }
+    });
 </script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
