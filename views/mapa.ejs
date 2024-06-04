@@ -18,11 +18,11 @@
     <script src="https://kit.fontawesome.com/26fe3ca93f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <% include('header.ejs') %>
+    <%- include('models/head') %>
 
     <div class="main-content">
         <div class="banner">
-            <img src="Mapa_Grafico.png" alt="Banner Image">
+            <img src="./assets/img/Mapa_Grafico.png" alt="Banner Image">
         </div>
 
         <div class="container">
@@ -182,6 +182,6 @@
         </div>
     </div>
 
-    <% include('footer.ejs') %>
+    <%- include('models/footer') %>
 </body>
 </html>

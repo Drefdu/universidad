@@ -270,7 +270,6 @@ button {
   margin-right: auto;
   margin-bottom: 2rem;
   max-width: 750px;
-  max-height: 400px;
   overflow: hidden;
   padding: 1rem;
 }
@@ -280,13 +279,34 @@ button {
   border-radius: 15rem;
   bottom: 6rem;
   left: 10rem;
-  max-width: 400px;
-  max-height: 400px;
+  height: clamp(18.75rem, 16.463rem + 9.756vi, 25rem);
+  width: clamp(18.75rem, 16.463rem + 9.756vi, 25rem);
   overflow: hidden;
   position: absolute;
-  
+  background-image: url(../../assets/img/prueba.jpg);
+  background-size: cover;
   z-index: -1;
 }
+
+@media (max-width: 1380px) {
+  .profesores__image {
+    position: relative;
+    bottom: 0rem;
+    left: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }  
+
+  .profesores__card-profesores {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profesores {
+    margin-top: 2rem;
+  }
+ }
 
  @media (max-width: 450px) {
   .banner__image-container {

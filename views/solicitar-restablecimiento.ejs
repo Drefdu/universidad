@@ -2,14 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Solicitar Restablecimiento de Contraseña</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Recuperar contraseña</title>
+    <link rel="stylesheet" href="assets/styles/recuperar.css">
 </head>
 <body>
-    <h1>Solicitar Restablecimiento de Contraseña</h1>
-    <form action="/login/recuperarRequest" method="post">
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required>
-        <button type="submit">Enviar</button>
-    </form>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container">
+                <div class="form">
+                    <img src="assets/img/Namek_logo.png" alt="Namek Logo" class="logo">
+					<br>
+                    <h2>Recuperación de contraseña</h2>
+					<br>
+                    <form class="form form-register" id="loginForm" action="/solicitar-restablecimiento" method="post">
+                        <div>
+                            <label for="fname">
+                                <i class='bx bx-envelope'></i>
+                                <input type="email" id="fname" name="correo" placeholder="Correo Electrónico" required>
+                            </label>
+                        </div>
+                        <input type="submit" value="Enviar Solicitud" class="submit-button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
