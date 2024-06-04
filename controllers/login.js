@@ -9,11 +9,15 @@ const transporter = nodemailer.createTransport({
         pass: process.env.NODE_MAILER_PASS
     }
 });
-  
+
 exports.getUser = async (req, res) => {
   try {
     const { correo, contrasena } = req.body;
-    const user = await User.findOne({ correo, pass: contrasena });
+
+    // Encrypt the password using SHA-1
+    const hashedPassword = crypto.createHash('sha1').update(contrasena).digest('hex');
+    
+    const user = await User.findOne({ correo, pass: hashedPassword });
 
     if (user) {
         req.session.user = user;
@@ -23,7 +27,7 @@ exports.getUser = async (req, res) => {
     }
 
   } catch (error) {
-      console.error('Error al consultar la base de datos:', err);
+      console.error('Error al consultar la base de datos:', error);
       res.status(500).send('Error interno del servidor');
   }
 }
@@ -32,8 +36,7 @@ exports.resetPassRequest = async (req, res) => {
     try {
         const { correo } = req.body;
         const token = crypto.randomBytes(20).toString('hex');
-        const expirationTime = Date.now() + 3600000; 
-        
+        const expirationTime = Date.now() + 3600000; // 1 hora
 
         const user = await User.findOneAndUpdate(
             { correo },
@@ -45,7 +48,7 @@ exports.resetPassRequest = async (req, res) => {
             return res.status(404).send('El correo electrónico proporcionado no está registrado');
         }
 
-        const resetLink = `http://${process.evn.DOMAIN}:${process.env.PORT}/login/restablecer/${token}`;
+        const resetLink = `http://localhost:${process.env.PORT}/login/restablecer/${token}`;
         const mailOptions = {
             to: correo,
             from: 'your-email@gmail.com',
@@ -61,7 +64,6 @@ exports.resetPassRequest = async (req, res) => {
             res.send('Correo de restablecimiento enviado');
         });
     } catch (err) {
-        
         console.error('Error al actualizar el token:', err);
         res.status(500).send('Error interno del servidor');
     }
@@ -82,7 +84,8 @@ exports.showResetView = async (req, res) => {
         res.render('restablecer', { token });
 
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).send('Error interno del servidor');
     }
 }
 
@@ -100,17 +103,18 @@ exports.resetPass = async (req, res) => {
             return res.status(400).send('El enlace de restablecimiento es inválido o ha expirado');
         }
 
-        user.pass = nuevaContrasena;
+        // Encrypt the new password using SHA-1
+        const hashedPassword = crypto.createHash('sha1').update(nuevaContrasena).digest('hex');
+
+        user.pass = hashedPassword;
         user.resetPasswordToken = undefined;
         user.resetPasswordExpires = undefined;
         await user.save();
 
         res.send('Contraseña restablecida correctamente');
 
-
     } catch (error) {
+        console.error('Error al restablecer la contraseña:', error);
         res.status(500).send('Error interno del servidor');
     }
 }
-
-
