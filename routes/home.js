@@ -4,7 +4,7 @@ const { Client } = require('@elastic/elasticsearch');
 const client = new Client({
   node: 'https://81a3e41e8b0e4b35a2159519111cdb91.us-central1.gcp.cloud.es.io:443',
   auth: {
-      apiKey: 'SXg1U25JOEI3RFUyMHROREEtSUc6SkNpWHRwU2ZTdzJqX1JGNy00a0FEUQ=='
+      apiKey: process.env.ELASTIC_SEARCH_API_KEY
   }
 });
 

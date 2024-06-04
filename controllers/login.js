@@ -45,7 +45,7 @@ exports.resetPassRequest = async (req, res) => {
             return res.status(404).send('El correo electrónico proporcionado no está registrado');
         }
 
-        const resetLink = `http://localhost:${process.env.PORT}/login/restablecer/${token}`;
+        const resetLink = `http://${process.evn.DOMAIN}:${process.env.PORT}/login/restablecer/${token}`;
         const mailOptions = {
             to: correo,
             from: 'your-email@gmail.com',
